@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
 
@@ -20,7 +20,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -35,16 +37,19 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/resss.css' %}" rel="stylesheet">
+    <link href="{% static 'css/res.css' %}" rel="stylesheet">
+    <link href="{% static 'css/course.css' %}" rel="stylesheet">
+    <link href="{% static 'css/res2.css' %}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+    <link href="{% static 'css/stylee.css' %}" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
     <!-- <link href="{% static 'css/main2.css' %}" rel="stylesheet"> -->
 
 </head>
 
 
-<body>
+<body data-bs-theme="dark">
 
     <!-- Spinner Start -->
     <div id="spinner"
@@ -54,14 +59,11 @@
         </div>
     </div>
     <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
     <div class="container-fluid topbar d-none d-xl-block w-100">
         <div class="row gx-0 align-items-center" style="height: 45px;">
             <div class="col-lg-6 text-center text-lg-start mb-lg-0">
                 <div class="d-flex flex-wrap">
-                   
+
                     <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt me-2" style="color: #f47d3a"></i>+998
                         (65) 364-42-50</a>
                     <a href="#" class="text-muted me-0"><i class="fas fa-envelope me-2"
@@ -70,9 +72,6 @@
             </div>
             <div class="col-lg-6 text-center text-lg-end">
                 <div class="d-flex align-items-center justify-content-end">
-                    <!-- <a href="#" class="text-muted me-3"><i class="fas fa-clock me-2" style="color: #f47d3a"></i>Mon -
-                        Sat 8:00 -
-                        17:30, Sunday - CLOSED</a> -->
                     <a target="_blank" href="https://www.facebook.com/ooobnpz"
                         class="btn btn-primary btn-square border border-white me-3"><i
                             class="fab fa-facebook-f"></i></a>
@@ -81,8 +80,7 @@
                     <a target="_blank" href="https://t.me/bnpz_uz"
                         class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-telegram"></i></a>
                     <a target="_blank" href="https://www.youtube.com/channel/UCVC83j3BHnFTlTVojn9dzTA"
-                        class="btn btn-primary btn-square border border-white me-3"><i
-                            class="fab fa-youtube"></i></a>
+                        class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-youtube"></i></a>
 
 
                 </div>
@@ -91,42 +89,46 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar & Hero Start -->
     <div class="container-fluid sticky-top px-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-light" style="padding: 0 55px">
-            <a href="index.html" class="navbar-brand p-0">
-                <img src="{% static 'img/ung.png' %}" style="width: 90px;" alt="Logo">
-                <img src="{% static 'img/logo_bnpz.png' %}" style="width: 70px;" alt="Logo">
+            <a href="{% url 'index' %}" class="navbar-brand p-0">
+                <img src="{% static 'img/ung.png' %}" class="images_logo" style="width: 110px;" alt="Logo">
+                <img src="{% static 'img/logo3.png' %}" class="images_logo" style="width: 120px;" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto pt-2 pt-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Bosh sahifa</a>
+                    <a href="{% url 'index' %}" class="nav-item nav-link active"
+                        style="font-family: sans-serif; font-weight: 600;">Bosh
+                        sahifa</a>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Biz
+                        <a href="#" class="nav-link dropdown-toggle text-dark"
+                            style="font-family: sans-serif; font-weight: 600;" data-bs-toggle="dropdown">Biz
                             haqimizda</a>
                         <div class="dropdown-menu m-lg-0">
-                            <a href="feature.html" class="dropdown-item drop-item">Zavod xronikasi</a>
-                            <a href="blog.html" class="dropdown-item drop-item">Zavod ijtimoiy siyosati</a>
-                            <a href="team.html" class="dropdown-item drop-item">Rahbariyat</a>
+                            <a href="{% url 'chronicle' %}" class="dropdown-item drop-item">Zavod xronikasi</a>
+                            <a href="{% url 'politics' %}" class="dropdown-item drop-item">Zavod ijtimoiy siyosati</a>
+                            <a href="{% url 'leader' %}" class="dropdown-item drop-item">Rahbariyat</a>
                             <a href="testimonial.html" class="dropdown-item drop-item">Ijtimoiy obyektlar</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Ishlab
+                        <a href="#" class="nav-link dropdown-toggle text-dark"
+                            style="font-family: sans-serif; font-weight: 600;" data-bs-toggle="dropdown">Ishlab
                             chiqarish</a>
                         <div class="dropdown-menu m-lg-0">
-                            <a href="feature.html" class="dropdown-item">Maxsulotlar</a>
+                            <a href="feature.html" class="dropdown-item">Mahsulotlar</a>
                             <a href="blog.html" class="dropdown-item">Sertifikatlar</a>
 
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Xizmatlar</a>
+                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+                            style="font-family: sans-serif; font-weight: 600;">Xizmatlar</a>
                         <div class="dropdown-menu m-lg-0">
                             <a href="feature.html" class="dropdown-item">Fuqaro murojaati</a>
                             <a href="blog.html" class="dropdown-item">Savol va javoblar</a>
@@ -136,16 +138,17 @@
                     </div>
 
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Karyera</a>
+                    <div class="not-fixed nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+                            style="font-family: sans-serif; font-weight: 600;">Karyera</a>
                         <div class="dropdown-menu m-lg-0">
                             <a href="https://jobs.bnpz.uz" target="_blank" class="dropdown-item">Rezyume yuborish</a>
                             <a href="#" target="_blank" class="dropdown-item">Tanlov</a>
-
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Korruptiyaga
+                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"
+                            style="font-family: sans-serif; font-weight: 600;">Korruptiyaga
                             qarshi</a>
                         <div class="dropdown-menu m-lg-0" style="margin: 20px;">
                             <a href="feature.html" class="dropdown-item">"Buxoro NQIZ" MCHJ direktori murojaati</a>
@@ -159,11 +162,12 @@
                         </div>
                     </div>
 
+
                 </div>
                 <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
 
                     <div class="nav-item dropdown lang_size">
-                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">UZ
+                        <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Uz
                         </a>
                         <div class="dropdown-menu m-lg-0" style="min-width: 25%;">
                             <a href="feature.html" class="dropdown-item d-flex align-items-center ">
@@ -206,9 +210,125 @@
     <!-- Modal Search End -->
 
 
-    {% block content %}
-    {% endblock content %}
 
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer Start -->
+    <div class="container-fluid  wow fadeIn" style="background-color: #f2f3f5 !important" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="footer-item">
+                            <a href="{% url 'index' %}" class="d-flex align-items-center justify-content-center mb-3">
+                                <!-- <img src="{% static 'img/ung.png' %}" style="width: 80px;" alt="Logo"> -->
+                                <img src="{% static 'img/logo3.png' %}" style="width: 150px;" alt="Logo">
+
+                            </a>
+                            <p class="mb-3 text-dark" style="line-height: 27px;"> <span class="text-body"> Sayt
+                                    materiallaridan to'liq yoki qisman
+                                    foydalanilganda<a href="#" class="border-bottom text-dark"> www.bnpz.uz
+                                    </a>veb-sayti
+                                    manzili ko'rsatilishi shart.</span></p>
+
+                            <div class="footer-btn d-flex align-items-center justify-content-center">
+
+
+                                <a target="_blank" href="https://www.facebook.com/ooobnpz"
+                                    class="btn btn-secondary text-dark btn-square border border-dark me-2 p-4 fs-4"
+                                    style="border-radius: 5px; background-color: #f2f3f5; margin: 0 5px;"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/bnpz_uz"
+                                    class="btn btn-secondary text-dark btn-square border border-dark me-2 p-4 fs-4"
+                                    style="border-radius: 5px; background-color: #f2f3f5; margin: 0 5px;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a target="_blank" href="https://t.me/bnpz_uz"
+                                    class="btn btn-secondary text-dark btn-square border border-dark me-2 p-4 fs-4"
+                                    style="border-radius: 5px; background-color: #f2f3f5; margin: 0 5px;"><i
+                                        class="fab fa-telegram"></i></a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UCVC83j3BHnFTlTVojn9dzTA"
+                                    class="btn btn-secondary text-dark btn-square border border-dark me-2 p-4 fs-4"
+                                    style="border-radius: 5px; background-color: #f2f3f5; margin: 0 5px;"><i
+                                        class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column ">
+                        <h4 class="text-dark mb-4" style="font-family: sans-serif;">Biz haqimizda</h4>
+                        <a href="{% url 'chronicle' %}"><i class="fas fa-angle-right me-2"></i> Zavod xronikasi</a>
+                        <a href="{% url 'politics' %}"><i class="fas fa-angle-right me-2"></i> Zavod ijtimoiy
+                            siyosati</a>
+                        <a href="{% url 'leader' %}"> <i class="fas fa-angle-right me-2"></i> Rahbariyat</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Ijtimoiy obyektlar</a>
+
+                    </div>
+                    <div class="footer-item d-flex flex-column mt-3">
+                        <h4 class="text-dark mb-4" style="font-family: sans-serif;">Ishlab chiqarish</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Mahsulotlar</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Sertifikatlar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-dark mb-4" style="font-family: sans-serif;">Xizmatlar</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Fuqaro murojaati</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Savol va javoblar</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Normativ-huquqiy aktlar</a>
+                    </div>
+                    <div class="footer-item d-flex flex-column mt-5">
+                        <h4 class="text-dark mb-4" style="font-family: sans-serif;">Karyera</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Rezyume yubborish</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Tanlov</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-dark mb-4" style="font-family: sans-serif;">Aloqa</h4>
+                        <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
+                        <a href=""><i class="fas fa-envelope me-2"></i> info@bnpz.uz</a>
+                        <a href=""><i class="fas fa-phone me-2"></i> +998 (65) 364-42-50</a>
+                        <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +998 (65) 364-16-67</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid  py-4"
+        style="background-color: #f2f3f5 !important; border-top: 1px solid rgba(56, 54, 54, 0.644); ">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12 text-center text-md-start mb-md-0">
+                    <span class="text-body"><i class="fas fa-copyright me-2" style="color: #979494;"></i>2024. Barcha
+                        huquqlar himoyalangan</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.dataset.bsTheme =
+                element.dataset.bsTheme == "light" ? "dark" : "light";
+        }
+        function stepFunction(event) {
+            debugger;
+            var element = document.getElementsByClassName("collapse");
+            for (var i = 0; i < element.length; i++) {
+                if (element[i] !== event.target.ariaControls) {
+                    element[i].classList.remove("show");
+                }
+            }
+        }
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

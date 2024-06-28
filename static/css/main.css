@@ -265,11 +265,11 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/carousel-2.jpg);
+    background: linear-gradient(rgba(0, 18, 72, 0.7), rgba(0, 18, 72, 0.7)), url(../img/carousel3.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 60px 0 60px 0;
+    padding: 40px 0 40px 0;
 }
 
 .bg-breadcrumb .breadcrumb {
@@ -962,7 +962,8 @@
 
 /*** Footer Start ***/
 .footer {
-    background: linear-gradient(rgba(0, 18, 72, 0.9), rgba(0, 18, 72, 1)), url(../img/footer-img1.jpeg);
+    /* background: linear-gradient(rgba(0, 18, 72, 0.9), rgba(0, 18, 72, 1)), url(../img/footer-img1.jpeg); */
+    background-color: aqua;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1001,7 +1002,7 @@
 /*** copyright Start ***/
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark);
+    background-color: #f2f3f5 !important
 }
 
 /*** copyright end ***/
