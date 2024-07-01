@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid bg-breadcrumb ">
+    <div class="container text-center py-3" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s" style="font-family: sans-serif;">
+            Mehnat faoliyati</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Bosh sahifa</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'leader' %}">Rahbariyat</a></li>
+            <li class="breadcrumb-item"><a href="#">Mehnat faoliyati</a></li>
+        </ol>
+    </div>
+</div>
+
+
+<div class="container">
+    <a href="{% url 'leader' %}" type="button" class="btn btn-outline-primary mt-4  mx-3 "
+        style="border-radius: 5px; transition-duration: 0.3s;">
+        <i class="fa-solid fa-arrow-left"></i>
+        orqaga</a>
+
+    <div class="row my-5">
+
+        <div class="col-lg-3 d-flex justify-content-center m-0">
+            <img src="{{leader.image.url}}" width="100%" class="rounded" alt="">
+        </div>
+
+        <div class="col-lg-9 pt-lg-0 content">
+            <h4 style="font-family: sans-serif; margin-top: 20px;">{{leader.fullname}}</h4>
+            <p class="fs-6 text-dark ">
+                {{leader.career}}
+            </p>
+
+
+            <p class="mt-5">
+                {{leader.activity | safe}}
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

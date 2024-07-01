@@ -1,0 +1,461 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid bg-breadcrumb ">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s" style="font-family: sans-serif;">
+            Mahsulotlar</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Bosh sahifa</a></li>
+            <li class="breadcrumb-item"><a href="#">Mahsulotlar</a></li>
+        </ol>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="container">
+
+    <section id="specials" class="specials section">
+
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Specials</h2>
+            <p>Check Our Specials</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabse-2 flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Modi sit est</a>
+                            <hr class="p-0 m-0">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Benzin</a>
+                            <hr class="p-0 m-0">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Kerosin</a>
+                            <hr class="p-0 m-0">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Dizel</a>
+                            <hr class="p-0 m-0">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Mazut</a>
+                            <hr class="p-0 m-0">
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="specials-tab-1">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Architecto ut aperiam autem id</h3>
+                                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila
+                                        parde sonata raqer a videna mareta paulona marka</p>
+                                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum
+                                        eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat
+                                        minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui
+                                        similique accusamus nostrum rem vero</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="assets/img/specials-1.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="specials-tab-2">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Benzin</h3>
+                                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila
+                                        parde sonata raqer a videna mareta paulona marka</p>
+                                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit
+                                        ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna
+                                        desera vafle de nideran pal</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="assets/img/specials-2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="specials-tab-3">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Kerosin</h3>
+                                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila
+                                        parde sonata raqer a videna mareta paulona marka</p>
+                                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit
+                                        ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna
+                                        desera vafle de nideran pal</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="assets/img/specials-2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="specials-tab-4">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Dizel</h3>
+                                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila
+                                        parde sonata raqer a videna mareta paulona marka</p>
+                                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit
+                                        ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna
+                                        desera vafle de nideran pal</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="assets/img/specials-2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="specials-tab-5">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Mazut</h3>
+                                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila
+                                        parde sonata raqer a videna mareta paulona marka</p>
+                                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit
+                                        ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna
+                                        desera vafle de nideran pal</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="assets/img/specials-2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+ -->
+
+
+
+<section id="specials" class="specials section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row my-5">
+            <div class="col-lg-4">
+                <ul class="nav nav-tabs flex-column" style="margin-right: 20px;">
+                    <li class="product_list nav-item">
+                        <a class="active show" data-bs-toggle="tab" href="#specials-tab-1">Aviatsiya yonilg'isi.</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-2">Suyultirilgan uglevodorod gazi.</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-3">Dizel yoqilg'isi</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-4">O'choq mazut</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-5">Uglevodorod eritgichi</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-6">Avtomobillar uchun benzin</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-7">Pirolizli gaz</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-8">Propan xladagenti</a>
+                    </li>
+                    <hr class="p-0 m-0">
+                    <li class="product_list nav-item">
+                        <a class="" data-bs-toggle="tab" href="#specials-tab-9">Texnik oltingugurt</a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-8 mt-4 mt-lg-0">
+                <div class="tab-content" style="margin-left: 20px;">
+                    <div class="tab-pane active show" id="specials-tab-1">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: Aviatsiya
+                                            yonilg'isi.
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span> Jet A-1
+                                            aviatsiya yonilg'isi G'arbiy morskoy samoletlari,
+                                            jumladan, ko'plab mamlakatlarda, shu jumladan MDH mamlakatlarida
+                                            qo'llaniladigan
+                                            “Boing” v “Aerobus” samoletlari uchun standart aviatsiya yonilg'isidir. Jet
+                                            A-1
+                                            aviatsiya yonilg'isining yuqori darajada tozaligi, yong'in va portlashga
+                                            xavfsizligi uning o'ziga xos xususiyatlari bo'lib hisoblanadi.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Marka:</span> Jet A-1.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold"> Normativ hujjat:</span> O'zDST
+                                            1117:2007.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Jahon m'yorlariga mosligi:</span>
+                                            DEFSTAN9191.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Iste'molchi:</span> “Uzbekistan
+                                            Airways” AJ.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 2009 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-2">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: GOST 20448-2018
+                                            bo'yicha SPBT maishiy-kommunal iste'mol uchun
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span> Sanoat va
+                                            maishiy-kommunal iste'mol uchun yonilg'i sifatida.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Marka:</span> SPBT</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Iste'molchi:</span> Xalq xo'jaligi va
+                                            O'z.Res. aholisi.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 1997 </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-3">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: Ts
+                                            16472899-044:2021 yarim sintetik dizel yonilg'isi.
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span> Tezyurar
+                                            teplovoz, kema dizellari va gaz turbinalari, umummaqsadli dizellar uchun.
+                                        </p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Marka:</span> SSDF</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Afzalliklari:</span>Yangi turdagi
+                                            dizel yonilg'isi an'anaviy dizel yonilg'isidan yaxshilangan setan soni va
+                                            indeksi ko'rsatkichlari, shuningdek, politsiklik aromatik uglevodorodlar
+                                            miqdori bilan ajralib turadi. Setan soni va indeksining oshishi dizel
+                                            yonilg'isining ekspluatatsion va iqtisodiy ko'rsatkichlarini yaxshilaydi.
+                                            Politsiklik aromatik uglevodorodlar miqdorining kamayishi chiqindi gazlar
+                                            tarkibidagi zararli moddalarning atrof-muhit va inson salomatligiga zararli
+                                            ta'sirini kamaytiradi.</p>
+
+                                        <p class="m-0 pb-3"><span class="fw-bold">Iste'molchi:</span> O'zbekiston
+                                            Respublikasi aholisi.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 2021 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-4">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot:Statsionar
+                                            qozonxonalar va texnologik uskunalar uchun.
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span> Statsionar
+                                            qozonxonalar va texnologik uskunalar uchun.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Marka:</span> 40, 100.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Normativ hujjat:</span> GOST
+                                            10585-2013</p>
+
+                                        <p class="m-0 pb-3"><span class="fw-bold">Iste'molchi:</span> O'zbekiston
+                                            Respublikasi aholisi.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 1997 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-5">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: Uglevodorod
+                                            eritkichi.
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span>Lok-bo‘yoq
+                                            sanoatida foydalanish.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Afzalligi:</span> Ksilol bo‘ylab
+                                            barqaror uchuvchanligi, suyuqlikning yonuvchi-portlovchi xossalarining
+                                            yaxshilanganligi (o‘t olish harorati 30-340 S ni tashkil etadi), xushbo‘y
+                                            fraksiyani qo‘shish hisobidan suyuqlikning yaxshilangan maqsadli eruvchanlik
+                                            xususiyati.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Marka:</span> S4 – 135/220..</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Normativ hujjat:</span> O‘z DSt 3035:
+                                            2015.</p>
+
+                                        <p class="m-0 pb-3"><span class="fw-bold">Iste'molchi:</span> Lok-bo‘yoq ishlab
+                                            chiqaruvchilar</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 2008 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-6">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <p class="m-0 pb-1"><span class="fw-bold">Marka:</span> AI-80-K2-L, AI-91-K2-L,
+                                            AI-92-K2-L, AI-95-K2-L</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Normativ hujjat:</span> O‘z DSt 3035:
+                                            2015.</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Xalqaro standartlarga
+                                                muvofiqligi:</span> Yevro 2</p>
+
+                                        <p class="m-0 pb-1"><span class="fw-bold">Iste'molchi:</span>O‘zbekiston
+                                            Respublikasi xalq xo‘jaligi</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">O`zlashtirish sanasi:</span> 2003
+                                            -2004 yil, 2014 yil </p>
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <p class="m-0 pb-1"><span class="fw-bold">Marka:</span>QuWatt AI-95.</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Normativ hujjat:</span>Ts 16472899-043:2020.</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Xalqaro standartlarga
+                                                muvofiqligi:</span> Yevro 2</p>
+
+                                        <p class="m-0 pb-1"><span class="fw-bold">Iste'molchi:</span>O‘zbekiston
+                                            Respublikasi xalq xo‘jaligi</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">O`zlashtirish sanasi:</span> 2020 yil </p>
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <p class="m-0 pb-1"><span class="fw-bold">Marka:</span> AI-98-K2-L</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Normativ hujjat:</span>O‘z DSt 3031:2015</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Xalqaro standartlarga
+                                                muvofiqligi:</span> Yevro 2</p>
+
+                                        <p class="m-0 pb-1"><span class="fw-bold">Iste'molchi:</span>O‘zbekiston
+                                            Respublikasi xalq xo‘jaligi</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">O`zlashtirish sanasi:</span> 2021 yil </p>
+
+                                    </div>
+                             
+                        
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-7">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: Pirolizli gazolin.
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span>Neft-kimyo sohasi uchun xom ashyo.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Normativ hujjat:</span> Ts 16472899-037:2016.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Iste'molchi:</span> Eksport uchun yetkazib beriladi.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 2016 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-8">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: Ts 16472899-039:2018ga muvofiq propanli xladagent
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Qo'llash sohasi:</span>Qo‘llash hujjatlarida foydalanish nazarda tutilgan texnologik(kompressor) va boshqa uskunalarni sovutish uchun.</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 2017 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane show" id="specials-tab-9">
+                        <div class="row">
+                            <div class="col-lg-12 details order-2 order-lg-1">
+                                <div class="d-flex align-items-center flex-nowrap text-dark">
+                                    <div class="d-block">
+                                        <h4 class="m-0 pb-3" style="font-family: sans-serif;">Maxsulot: Texnik oltingugurt
+                                        </h4>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Marka:</span>9998-sort</p>
+                                        <p class="m-0 pb-3"><span class="fw-bold">Normativ hujjat:</span>GOST 127.1-93</p>
+                                        <p class="m-0 pb-1"><span class="fw-bold">Iste'molchi:</span>O‘zbekiston
+                                            Respublikasi xalq xo‘jaligi</p>
+                    
+                                        <p class="m-0 pb-3"><span class="fw-bold">O`zlashtirish sanasi:</span> 1997 yil
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- /Specials Section -->
+
+{% endblock %}

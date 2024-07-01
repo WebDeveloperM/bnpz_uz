@@ -13,52 +13,58 @@
     </div>
 </div>
 
+
+
+
 <div class="container">
     <div class="row my-5">
+        {% for leader in leaders %}
+
         <div class="col-lg-3 d-flex justify-content-center m-0">
-            <img src="{% static 'img/fazilov.jpg' %}" width="100%" class="rounded" alt="">
+            <img src="{{leader.image.url}}" width="100%" class="rounded" alt="">
         </div>
-        <div class="col-lg-9 pt-5 pt-lg-0 content">
-            <h4 style="font-family: sans-serif; margin-top: 25px;">Fazilov Akbar Alisherovich</h4>
+
+        <div class="col-lg-9  pt-lg-0 content">
+            <h4 style="font-family: sans-serif; margin-top: 20px;">{{leader.fullname}}</h4>
             <p class="fs-6 text-dark ">
-                "Buxoro NQIZ" MCHJ direktori
+                {{leader.career}}
             </p>
 
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-clock "
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-clock text-secondary " style="width: 20%; font-size: 25px; "></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Qabul kunlari: <br>
                         <span>
-                            Oyning oxirgi payshanbasi 15:00 dan 17:00 gacha
+                            {{leader.reception_time}}
                         </span>
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-phone"
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-phone text-secondary" style="width: 20%; font-size: 25px; "></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Telefon: <br>
                         <span>
-                            +998 (65) 364-45-56
+                            {{leader.phone}}
                         </span>
                     </p>
                 </div>
             </div>
 
-            <button type="button" class="btn btn-outline-primary mt-4  mx-3 "
+            <a href="{% url 'leader_detail' leader.pk %}" type="button" class="btn btn-outline-primary mt-4  mx-3 "
                 style="border-radius: 5px; transition-duration: 0.3s;">
                 <i class="fa-regular fa-rectangle-list" style="margin-right: 5px;"></i>
-                Mehnat faoliyati</button>
+                Mehnat faoliyati</a>
 
         </div>
+        <hr style="margin: 25px 0;">
+        {% endfor%}
     </div>
-
+    <!-- 
     <hr>
     <div class="row my-5">
         <div class="col-lg-3 d-flex justify-content-center m-0">
@@ -72,8 +78,7 @@
 
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-clock "
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-clock  text-secondary" style="width: 20%; font-size: 25px;"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Qabul kunlari: <br>
@@ -85,8 +90,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-phone"
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-phone text-secondary" style="width: 20%; font-size: 25px;"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Telefon: <br>
@@ -118,8 +122,7 @@
 
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-clock "
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-clock text-secondary" style="width: 20%; font-size: 25px;"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Qabul kunlari: <br>
@@ -131,8 +134,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-phone"
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-phone text-secondary" style="width: 20%; font-size: 25px;"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Telefon: <br>
@@ -165,8 +167,7 @@
 
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-clock "
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-clock  text-secondary" style="width: 20%; font-size: 25px;"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Qabul kunlari: <br>
@@ -178,8 +179,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-phone"
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-phone text-secondary" style="width: 20%; font-size: 25px; "></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Telefon: <br>
@@ -211,8 +211,7 @@
 
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-clock "
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-clock text-secondary" style="width: 20%; font-size: 25px"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Qabul kunlari: <br>
@@ -224,8 +223,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-phone"
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-phone text-secondary" style="width: 20%; font-size: 25px; "></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Telefon: <br>
@@ -257,8 +255,7 @@
 
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-clock "
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-clock text-secondary" style="width: 20%; font-size: 25px"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Qabul kunlari: <br>
@@ -270,8 +267,7 @@
             </div>
             <div class="row">
                 <div class="col-md-1 d-flex justify-content-center align-items-center">
-                    <i class="fa-solid fa-phone"
-                        style="width: 20%; font-size: 25px; color: rgba(255, 115, 0, 0.397);"></i>
+                    <i class="fa-solid fa-phone text-secondary" style="width: 20%; font-size: 25px;"></i>
                 </div>
                 <div class="col-md-7">
                     <p class="mt-3 text-dark">Telefon: <br>
@@ -288,87 +284,12 @@
                 Mehnat faoliyati</button>
 
         </div>
-    </div>
+    </div> -->
 
-    
+
+
+
+   
 </div>
-
-
-<!-- <div class="container pb-4">
-    <div class="header-history text-dark">
-        <br>
-        <p class="fs-5 text-center fw-bold text-dark py-3" style="text-align: center;">
-            “Buxoro neftni qayta ishlash zavodi” MCHJning sanoat xavfsizligi sohasi hamda sifat menejmenti, ekologik va
-            energetik menejment, sog`liqni saqlash va mehnat xavfsizligini ta’minlash menejmenti tizimlari sohasidagi
-            <br>
-            <b> S I Y O S A T I</b>
-        </p>
-
-        <p class="mt-2 mb-0" style="text-indent: 50px;">“Buxoro neftni qayta ishlash zavodi” MCHJ neft mahsulotlarini
-            ishlab chiqarish hamda qayta ishlash bo`yicha xizmat ko`rsatish faoliyati bilan shug`ullanadi. “Buxoro
-            neftni qayta ishlash zavodi” MCHJning asosiy vazifasi O`zbekiston Respublikasi iste’molchilarini bir maromda
-            sifatli neft mahsulotlari bilan ta’minlash va eksportni o`zlashtirishga yo`naltirilgan. Ushbu vazifani
-            amalga oshirish uchun "Buxoro neftni qayta ishlash zavodi" MCHJ quyidagi strategik yo`nalishlarni
-            belgilaydi: </p>
-
-        <p class="mt-1" style="text-indent: 50px;">
-            <em class="fw-bold">"ISTE’MOLCHI"</em>– Iste’molchilarning qoniqishlarini doimiy ravishda oshirib borish
-            yo`li bilan yetkazib
-            berilayotgan neft mahsulotlari va ko`rsatilayotgan xizmatlarning sifatliligiga ishonchini ta’minlash.
-        </p>
-        <p class="mt-1" style="text-indent: 50px;">
-            <em class="fw-bold">“DAVLAT VA JAMIYAT”</em> – Davlat, tarmoq va jamoat dasturlarini amalga oshirish orqali
-            O`zbekiston Respublikasi yoqilg`i-energetika kompleksining rivojlanishida faol ishtirok etish.
-        </p>
-        <p class="mt-1" style="text-indent: 50px;">
-            <em class="fw-bold">“AKSIYADORLAR”</em> – Barqaror iqtisodiy o`sish bilan aksiyadorlarning korxona
-            istiqboliga bo`lgan ishonchini to`la qozonish.
-        </p>
-        <p class="mt-1" style="text-indent: 50px;">
-            <em class="fw-bold">“YETKAZIB BERUVCHILAR”</em> – Kafolatlangan xom-ashyo bazasiga erishish.
-        </p>
-        <p class="mt-1" style="text-indent: 50px;">
-            <em class="fw-bold">“SALOHIYAT”</em> – Ichki salohiyatdan foydalangan holda menejment tizimlarini doimiy
-            takomillashtirib borish:
-        </p>
-
-        <ul style="margin-left: 30px;">
-            <li class="py-2  mx-2 px-2">Biznes jarayonlarning samarali ishlashi;</li>
-            <li class="py-2  mx-2 px-2">Xodimlarning kasbiy mahorati;</li>
-            <li class="py-2  mx-2 px-2">“Ishchi-xodimlarning hayoti va sog`lig`i ishlab chiqarish faoliyati
-                natijalaridan ustun” ligi tamoyili asosida ishchi-xodimlarning soglig`ini saqlash va mehnat
-                xavfsizligini ta’minlash;</li>
-            <li class="py-2  mx-2 px-2">Ekologik samaradorlik va tabiiy resurslardan oqilona foydalanish yo`li bilan
-                sog`lom kelajakka kafolat;</li>
-            <li class="py-2  mx-2 px-2">Korxona ishchi-xodimlari hamda ular oilasining ijtimoiy va hayot darajasini
-                oshirish;</li>
-            <li class="py-2  mx-2 px-2">Xodimlarni birlashtirilgan menejment tizimlariga jalb qilish maqsadida ularni
-                ruhlantirish va layoqatini oshirish;</li>
-            <li class="py-2  mx-2 px-2">Jamiyat va shaxsni korxonaning xavfli ishlab chiqarish ob`yektlaridagi
-                avariyalar, noxush hodisalar va ularning oqibatlaridan himoyalash;</li>
-            <li class="py-2  mx-2 px-2">Energetik samaradorlikni oshirish va yoqilg`i-energetika resurslaridan oqilona
-                foydalanish yo`li bilan energetik natijadorlikni doimiy takomillashtirib borish;</li>
-            <li class="py-2  mx-2 px-2">Korxona va butun tarmoqni samarali rivojlantirish maqsadida innovatsion
-                g`oyalarni izlash va joriy etish.</li>
-        </ul>
-
-        <p class="mt-1">
-            “Buxoro neftni qayta ishlash zavodi” MCHJ rahbariyati ushbu siyosat va undagi barcha yo`nalishlarning
-            muvofiqlashtirish ishlarini amalga oshirish maqsadida xodimlar uchun qulay va xavfsiz mehnat sharoitlarini
-            ta’minlash, xavfli ishlab chiqarish ob’yektlarida avariya sodir bo`lganda yetkaziladigan zarar uchun
-            javobgarlikni majburiy sug`urtalash, atrof-muhit ifloslanishining oldini olish, zaruriy resurslar va
-            ma’lumotlar bilan to`liq ta’minlash, ISO 9001, ISO 14001, ISO 45001, ISO 50001, AS 9100 xalqaro standartlar
-            talablariga muvofiq menejment tizimlarining natijadorligini doimiy oshirib borish, O`zbekiston
-            Respublikasining amaldagi qonunchiligiga va boshqa talablarga amal qilishni o`z zimmasiga oladi.
-        </p>
-        <p class="fs-6 text-dark my-2" style="font-weight: bold;">
-            “Buxoro neftni qayta ishlash zavodi” MCHJning siyosati 2022-yil 10-yanvardagi 16-sonli buyrug'i bilan
-            tasdiqlangan.
-        </p>
-
-
-    </div>
-
-</div> -->
 
 {% endblock %}

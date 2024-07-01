@@ -39,10 +39,11 @@
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/res.css' %}" rel="stylesheet">
     <link href="{% static 'css/course.css' %}" rel="stylesheet">
-    <link href="{% static 'css/res2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/res.css' %}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/stylee.css' %}" rel="stylesheet">
+    <link href="{% static 'css/res.css' %}" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
     <!-- <link href="{% static 'css/main2.css' %}" rel="stylesheet"> -->
 
@@ -50,7 +51,6 @@
 
 
 <body data-bs-theme="dark">
-
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -113,7 +113,7 @@
                             <a href="{% url 'chronicle' %}" class="dropdown-item drop-item">Zavod xronikasi</a>
                             <a href="{% url 'politics' %}" class="dropdown-item drop-item">Zavod ijtimoiy siyosati</a>
                             <a href="{% url 'leader' %}" class="dropdown-item drop-item">Rahbariyat</a>
-                            <a href="testimonial.html" class="dropdown-item drop-item">Ijtimoiy obyektlar</a>
+                            <a href="#" class="dropdown-item drop-item">Ijtimoiy obyektlar</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -121,7 +121,7 @@
                             style="font-family: sans-serif; font-weight: 600;" data-bs-toggle="dropdown">Ishlab
                             chiqarish</a>
                         <div class="dropdown-menu m-lg-0">
-                            <a href="feature.html" class="dropdown-item">Mahsulotlar</a>
+                            <a href="{% url 'product' %}" class="dropdown-item">Mahsulotlar</a>
                             <a href="blog.html" class="dropdown-item">Sertifikatlar</a>
 
                         </div>

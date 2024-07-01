@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Leadership
 # Create your views here.
 
 def index(request):
@@ -13,4 +13,12 @@ def politics(request):
     return render(request, 'politics.html')
 
 def leader(request):
-    return render(request, 'leader.html')
+    leaders = Leadership.objects.all()
+    return render(request, 'leader.html', {"leaders": leaders})
+
+def leader_detail(request, pk):
+    leader = Leadership.objects.get(id=pk)
+    return render(request, 'leader_detail.html', {"leader": leader})
+
+def product(request):
+    return render(request, 'product.html')
